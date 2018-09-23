@@ -16,7 +16,8 @@ const adUnitRoutes = require('./routes/adunit.route');
 
 app.use(bodyParser.json());
 app.use(cors());
-const port = process.env.PORT || 4300;
+const port = process.env.PORT || 4000;
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 app.use('/adunits', adUnitRoutes);
 

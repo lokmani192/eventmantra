@@ -21,6 +21,7 @@ adUnitRoutes.route('/add').post(function (req, res) {
 adUnitRoutes.route('/').get(function (req, res) {
   AdUnit.find(function (err, adUnits) {
     if (err) {
+      console.log("gand");
       console.log(err);
     }
     else {
