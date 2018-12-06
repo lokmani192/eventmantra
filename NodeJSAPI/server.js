@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const jwt = require('_helpers/jwt');
 const errorHandler = require('_helpers/error-handler');
@@ -18,7 +19,7 @@ app.use('/users', require('./users/users.controller'));
 
 // global error handler
 app.use(errorHandler);
-
+app.use(morgan('dev'));
 // start server
 const port = process.env.NODE_ENV === 'production' ? 80 : 4000;
 const server = app.listen(port, function () {

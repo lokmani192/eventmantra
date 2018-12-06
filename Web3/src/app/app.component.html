@@ -1,0 +1,160 @@
+
+<div class="wrapper responsive bs-app guest-nav">
+  <div class="top-navigation fixed-top">
+    <div class="container container-lg">
+      <!-- Mobile Navigation -->
+      <div class="navbar_header">
+        <button type="button" class="navbar-toggle" id="navbar-toggle1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a data-toggle="collapse" href="#search-div" aria-expanded="false" aria-controls="search-div" class="collapsed search-toggle-top"><i class="fa fa-search"></i></a>
+
+        <div class="navbar-collapse-right visible-xs">
+          <ul>
+            <li class="">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Started</a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="#LoginModal" data-toggle="modal"><i class="fa fa-lock m-right-xs"></i> Login</a></li>
+                <li></li>
+                <li><a href="#signupModal" data-toggle="modal" class="font-semi-bold">Users Register Now!</a></li>
+                <li><a href="http://www.letsplanevent.com/vendor-registration" class="font-semi-bold">Vendors Join Now!</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- ./navbar-collapse-right -->
+
+        <a class="brand" href="http://www.letsplanevent.com/"><img src="~/Images/letsplanevent-logo-white.png" alt="logo"></a>
+      </div>
+      <!-- End Mobile Navigation -->
+
+      <div id="nav-toggle1" class="navbar-collapse-left">
+        <ul>
+          <li class="inspire-link ">
+            <a href="http://www.letsplanevent.com/event-inspiration">Inspiration</a>
+          </li>
+          <li class="vendor-link ">
+            <a href="http://www.letsplanevent.com/professionals">Vendors</a>
+          </li>
+          <li class="tool-link dropdown-hover">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Planning Tools</a>
+            <ul class="dropdown-menu">
+              <li><a href="#LoginModal" data-toggle="modal">Wedding Website</a></li>
+              <li><a href="#LoginModal" data-toggle="modal">Cash Registry</a></li>
+              <li><a href="#LoginModal" data-toggle="modal">RSVP Tools</a></li>
+              <li><a href="#LoginModal" data-toggle="modal">Budget Tracker</a></li>
+              <li><a href="#LoginModal" data-toggle="modal">Wedding Checklist</a></li>
+            </ul>
+          </li>
+          <li class="shop-link ">
+            <a target="_blank" href="http://www.letsplanevent.net">Shop</a>
+          </li>
+        </ul>
+      </div><!-- navbar-collapse-left -->
+
+      <div class="navbar-collapse-right hidden-xs">
+        <ul>
+          <li class="hidden-sm">
+            <span class="text-upper">Vendors: </span>
+            <a href="http://www.letsplanevent.com/vendor-registration" class="pink">Join Now!</a>
+          </li>
+          <li class="hidden-sm">
+            <span class="text-upper">Users: </span>
+            <a href="#signupModal" data-toggle="modal">Register Now!</a>
+          </li>
+          <li class="visible-sm">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Started</a>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="#LoginModal" data-toggle="modal"><i class="fa fa-lock m-right-xs"></i> Login</a></li>
+              <li class="divider"></li>
+              <li><a href="#signupModal" data-toggle="modal" class="font-semi-bold">Users Register Now!</a></li>
+              <li><a href="http://www.letsplanevent.com/vendor-registration" class="font-semi-bold">Vendors Join Now!</a></li>
+            </ul>
+          </li>
+          <li class="hidden-sm"><a href="#LoginModal" data-toggle="modal">Login</a></li>
+        </ul>
+      </div><!-- ./navbar-collapse-right -->
+    </div><!-- ./container -->
+  </div>
+  <div class="body-container">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <div id="foot" class="clear-fix footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-col-1">
+          <div>Are you a Vendor?</div>
+          <div class="footer-margin"><a href="http://www.letsplanevent.com/vendor-registration" class="block">Click Here <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></div>
+          <div class="footer-margin">Contact Us:</div>
+          <div class="footer-margin">
+            <a href="#supportModal" data-toggle="modal" class="block">contact@letsplanevent.com <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a>
+          </div>
+          <div class="footer-margin">
+            <div>Letsplanevent.com</div>
+            <div>783 868 0532</div>
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <div>About Letsplanevent</div>
+          <div class="footer-margin">
+            <ul class="footer-ul-2">
+              <li><a href="http://www.letsplanevent.com/about" class="block">About Us <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">In The Press <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="http://www.letsplanevent.com/privacy-policy" class="block">Privacy Policy <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">Terms &amp; Conditions <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">Safe Payments <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">Payment Policies <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">FAQs <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+
+            </ul>
+          </div>
+
+        </div>
+        <div class="footer-col-3">
+          <div>Find A Couple:</div>
+          <div class="footer-margin">
+            <div><input id="Text1" type="text" placeholder="First Name" /></div>
+            <div><input id="Text1" type="text" placeholder="Last Name" /></div>
+          </div>
+        </div>
+        <div class="footer-col-4 text-center">
+          <a href="http://www.letsplanevent.com/" class="block"><img src="~/Images/letsplanevent-logo-white.png" alt="" /></a>
+          <div class="social-icons clear-fix">
+            <ul class="clear-fix">
+              <li><a class="facebook" href="https://www.facebook.com/letsplanevent" target="_blank">Facebbok</a></li>
+              <li><a class="twitter" href="https://twitter.com/letsplanevent" target="_blank">Twitter</a></li>
+              <li><a class="pinrest" href="https://www.pinterest.com/letsplanevent/" target="_blank">Pinterest</a></li>
+            </ul>
+          </div>
+          <div>&copy; {{ today | date }} - EventMantra Services Pvt Ltd</div>
+          <div>All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<a href="#" class="scroll-to-top" id="scroll-to-top-arrow"><i class="fa fa-arrow-up"></i></a>
+
+
+
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
+    <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <!--<router-outlet></router-outlet>-->
+      </div>
+    </div>
+  </div>
+</div>
