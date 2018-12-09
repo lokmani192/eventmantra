@@ -11,7 +11,7 @@
         </button>
         <a data-toggle="collapse" href="#search-div" aria-expanded="false" aria-controls="search-div" class="collapsed search-toggle-top"><i class="fa fa-search"></i></a>
 
-        <div class="navbar-collapse-right visible-xs">
+        <div class="navbar-collapse-right d-block d-sm-none">
           <ul>
             <li class="">
               <a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Started</a>
@@ -25,7 +25,7 @@
           </ul>
         </div><!-- ./navbar-collapse-right -->
 
-        <a class="brand" href="http://www.letsplanevent.com/"><img src="~/Images/letsplanevent-logo-white.png" alt="logo"></a>
+        <a class="brand" href="http://www.letsplanevent.com/"><img src="{{ImageBaseUrl}}assets/Images/letsplanevent-logo-white.png" alt="logo"></a>
       </div>
       <!-- End Mobile Navigation -->
 
@@ -47,9 +47,6 @@
               <li><a href="#LoginModal" data-toggle="modal">Wedding Checklist</a></li>
             </ul>
           </li>
-          <li class="shop-link ">
-            <a target="_blank" href="http://www.letsplanevent.net">Shop</a>
-          </li>
         </ul>
       </div><!-- navbar-collapse-left -->
 
@@ -63,7 +60,7 @@
             <span class="text-upper">Users: </span>
             <a href="#signupModal" data-toggle="modal">Register Now!</a>
           </li>
-          <li class="visible-sm">
+          <li class="d-none d-sm-block d-md-none">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Started</a>
             <ul class="dropdown-menu pull-right">
               <li><a href="#LoginModal" data-toggle="modal"><i class="fa fa-lock m-right-xs"></i> Login</a></li>
@@ -85,6 +82,7 @@
     <div class="container">
       <div class="footer-row">
         <div class="footer-col-1">
+          <div class="footer-col-style">
           <div>Are you a Vendor?</div>
           <div class="footer-margin"><a href="http://www.letsplanevent.com/vendor-registration" class="block">Click Here <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></div>
           <div class="footer-margin">Contact Us:</div>
@@ -96,7 +94,9 @@
             <div>783 868 0532</div>
           </div>
         </div>
-        <div class="footer-col-2">
+        </div>
+        <div class="footer-col-1">
+            <div class="footer-col-style">
           <div>About Letsplanevent</div>
           <div class="footer-margin">
             <ul class="footer-ul-2">
@@ -110,17 +110,20 @@
 
             </ul>
           </div>
-
+         </div>
         </div>
-        <div class="footer-col-3">
+        <div class="footer-col-1">
+            <div class="footer-col-style">
           <div>Find A Couple:</div>
           <div class="footer-margin">
             <div><input id="Text1" type="text" placeholder="First Name" /></div>
             <div><input id="Text1" type="text" placeholder="Last Name" /></div>
           </div>
+          </div>
         </div>
-        <div class="footer-col-4 text-center">
-          <a href="http://www.letsplanevent.com/" class="block"><img src="~/Images/letsplanevent-logo-white.png" alt="" /></a>
+        <div class="footer-col-1 text-center">
+            <div class="footer-col-style">
+          <a href="http://www.letsplanevent.com/" class="block"><img src="{{ImageBaseUrl}}assets/Images/letsplanevent-logo-white.png" alt="" /></a>
           <div class="social-icons clear-fix">
             <ul class="clear-fix">
               <li><a class="facebook" href="https://www.facebook.com/letsplanevent" target="_blank">Facebbok</a></li>
@@ -128,8 +131,9 @@
               <li><a class="pinrest" href="https://www.pinterest.com/letsplanevent/" target="_blank">Pinterest</a></li>
             </ul>
           </div>
-          <div>&copy; {{ today | date }} - EventMantra Services Pvt Ltd</div>
+          <div>&copy; {{today | date:'yyyy'}} - EventMantra Services Pvt Ltd</div>
           <div>All Rights Reserved</div>
+        </div>
         </div>
       </div>
     </div>

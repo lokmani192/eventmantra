@@ -38,7 +38,7 @@
     padding-bottom: 927px;
   }
 }
-
+ul,li{list-style:none}
 .bs-app.vendor-nav .top-navigation .navbar-collapse-right ul li .badge {
   top: 20px !important;
   left: auto !important;
@@ -125,7 +125,7 @@
 
 @media (min-width:992px) {
   .bs-app .container {
-    width: 970px;
+    width: 100%;
   }
 }
 
@@ -142,8 +142,9 @@
 }
 
 @media (min-width:1200px) {
+  .container {max-width:100%;padding-left:25px;padding-right:25px}
   .bs-app .container.container-lg {
-    width: 1170px;
+    width: 100%;
   }
 }
 
@@ -1036,7 +1037,8 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.open.inspire-link a:before {
-  /*background-image: url('../Images/vendor/profile/1.png');*/
+  @include bgImage(vendor/profile/1,png);
+  
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.open.vendor-link a:before {
@@ -1060,7 +1062,7 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.active.inspire-link a:before {
-  /*background-image: url('../Images/vendor/profile/1.png');*/
+  @include bgImage(vendor/profile/1,png);
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.active.vendor-link a:before {
@@ -1101,11 +1103,11 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.inspire-link a:before {
-  /*background-image: url('../Images/vendor/profile/2.png');*/
+  @include bgImage(vendor/profile/2,png);
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.inspire-link a:hover:before {
-  /*background-image: url('../Images/vendor/profile/1.png');*/
+  @include bgImage(vendor/profile/1,png);
 }
 
 .bs-app .top-navigation .header-top .navbar_left > ul > li.vendor-link a:before {
@@ -1499,11 +1501,11 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.open.inspire-link a:before {
-  /*background-image: url('../Images/vendor/profile/1.png');*/
+  @include bgImage(vendor/profile/1,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.open.vendor-link a:before {
-  /*background-image: url('../Images/vendor/profile/4.png');*/
+  @include bgImage(vendor/profile/4,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.open.shop-link a:before {
@@ -1511,7 +1513,7 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.open.tool-link a:before {
-  /*background-image: url('../Images/vendor/profile/6.png');*/
+  @include bgImage(vendor/profile/6,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.open > a {
@@ -1523,11 +1525,11 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.inspire-link a:before {
-  /*background-image: url('../Images/vendor/profile/1.png');*/
+  @include bgImage(vendor/profile/1,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.vendor-link a:before {
-  /*background-image: url('../Images/vendor/profile/4.png');*/
+  @include bgImage(vendor/profile/4,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.shop-link a:before {
@@ -1535,23 +1537,23 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.tool-link a:before {
-  /*background-image: url('../Images/vendor/profile/6.png');*/
+  @include bgImage(vendor/profile/6,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.review-link a:before {
-  /*background-image: url('../Images/vendor/profile/star2.png');*/
+  @include bgImage(vendor/profile/star2,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.message-link a:before {
-  /*background-image: url('../Images/vendor/profile/mail2.png');*/
+  @include bgImage(vendor/profile/mail2,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.profile-link a:before {
-  /*background-image: url('../Images/vendor/profile/profile2.png');*/
+  @include bgImage(vendor/profile/profile2,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.active.browse-link a:before {
-  /*background-image: url('../Images/vendor/profile/magnifier2.png');*/
+  @include bgImage(vendor/profile/magnifier2,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li + li {
@@ -1582,38 +1584,38 @@ div#dp-popup table thead {
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.inspire-link a:before {
-  /*background-image: url('../Images/vendor/profile/2.png');*/
+  @include bgImage(vendor/profile/2,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.inspire-link a:hover:before {
-  /*background-image: url('../Images/vendor/profile/1.png');*/
+  @include bgImage(vendor/profile/1,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.vendor-link a:before {
   top: 32px;
-  /*background-image: url('../Images/vendor/profile/3.png');*/
+  @include bgImage(vendor/profile/3,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.vendor-link a:hover:before {
-  /*background-image: url('../Images/vendor/profile/4.png');*/
+  @include bgImage(vendor/profile/4,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.tool-link a:before {
   top: 30px;
-  /*background-image: url('../Images/vendor/profile/5.png');*/
+  @include bgImage(vendor/profile/5,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.tool-link a:hover:before {
-  /*background-image: url('../Images/vendor/profile/6.png');*/
+  @include bgImage(vendor/profile/6,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.message-link a:before {
   top: 33px;
-  /*background-image: url('../Images/vendor/profile/mail1.png');*/
+  @include bgImage(vendor/profile/mail1,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.message-link a:hover:before {
-  /*background-image: url('../Images/vendor/profile/mail2.png');*/
+  @include bgImage(vendor/profile/mail2,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.shop-link a {
@@ -1640,11 +1642,11 @@ div#dp-popup table thead {
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.browse-link a:before {
   top: 33px;
-  /*background-image: url('../Images/vendor/profile/magnifier1.png');*/
+  @include bgImage(vendor/profile/magnifier1,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.browse-link a:hover:before {
-  /*background-image: url('../Images/vendor/profile/magnifier2.png');*/
+  @include bgImage(vendor/profile/magnifier2,png);
 }
 
 @media (max-width:767px) {
@@ -1655,7 +1657,7 @@ div#dp-popup table thead {
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.review-link a:before {
   top: 33px;
-  /*background-image: url('../Images/vendor/profile/star1.png');*/
+  @include bgImage(vendor/profile/star1,png);
 }
 
 .bs-app .top-navigation .navbar-collapse-left > ul > li.review-link a:hover:before {
@@ -2783,7 +2785,7 @@ div#dp-popup table thead {
   left: 0;
   right: 0;
   background: #790232;
-  padding: 56px 21px 70px;
+  padding: 56px 25px 70px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 600;
@@ -2851,10 +2853,15 @@ div#dp-popup table thead {
 }
 
 .bs-app .footer:not(.fixed-footer) .footer-row .footer-col-1 {
-  width: 265px;
+  width: 25%;
   float: left;
+  padding:10px;
 }
-
+.bs-app .footer:not(.fixed-footer) .footer-row .footer-col-1 .footer-col-style{
+  background-color: #48011e;
+  padding:10px;
+  min-height:250px;
+}
 .bs-app .footer:not(.fixed-footer) .footer-row .footer-col-2 {
   width: 235px;
   float: left;
