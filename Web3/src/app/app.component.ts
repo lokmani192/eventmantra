@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { User, Role } from './_models';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './_services';
@@ -11,13 +11,13 @@ import {AppConstants} from './app.constants';
 })
 export class AppComponent {
     currentUser: User;
-    ImageBaseUrl:string;
+    isFooterFixed: boolean = false;
     today: number = Date.now();
     constructor(
+        private element: ElementRef,
         private router: Router,
         private authenticationService: AuthenticationService
     ) {
-        this.ImageBaseUrl=AppConstants.ImageBaseUrl;
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
 
@@ -28,5 +28,27 @@ export class AppComponent {
     logout() {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      this.resize();
+    }
+
+    @HostListener('window:load', ['$event'])
+    onLoad(event) {
+      console.log("load");
+      this.resize();
+    }
+
+    @HostListener('window:scroll', ['$event'])
+    onScroll(event) {
+      this.resize();
+    }
+
+    resize() {
+      if (window.innerHeight > this.element.nativeElement.parentNode.clientHeight) {
+        this.isFooterFixed = true;
+      }
     }
 }

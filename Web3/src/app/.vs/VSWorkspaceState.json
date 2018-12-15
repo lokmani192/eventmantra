@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\_guards"
+    "\\home",
+    "\\shared",
+    "\\shared\\directives",
+    "\\shared\\footer",
+    "\\shared\\header"
   ],
-  "SelectedNode": "\\app.component.scss",
+  "SelectedNode": "\\home\\home.component.html",
   "PreviewInSolutionExplorer": false
 }

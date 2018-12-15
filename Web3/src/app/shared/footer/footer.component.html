@@ -1,0 +1,63 @@
+<div id="foot" class="clear-fix footer">
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-col-1">
+        <div class="footer-col-style">
+          <div>Are you a Vendor?</div>
+          <div class="footer-margin"><a href="http://www.letsplanevent.com/vendor-registration" class="block">Click Here <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></div>
+          <div class="footer-margin">Contact Us:</div>
+          <div class="footer-margin">
+            <a href="#supportModal" data-toggle="modal" class="block">{{contactEmail}} <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a>
+          </div>
+          <div class="footer-margin">
+            <div>{{websiteName}}</div>
+            <div>{{contactPhoneNo}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-1">
+        <div class="footer-col-style">
+          <div>About Letsplanevent</div>
+          <div class="footer-margin">
+            <ul class="footer-ul-2">
+              <li *ngFor="let aboutLink of aboutLinks">
+                <a href="{{aboutLink.link}}" class="{{aboutLink.className}}">{{aboutLink.text}} <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a>
+              </li>
+              <!--<li><a href="http://www.letsplanevent.com/about" class="block">About Us <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">In The Press <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="http://www.letsplanevent.com/privacy-policy" class="block">Privacy Policy <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">Terms &amp; Conditions <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">Safe Payments <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">Payment Policies <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>
+              <li><a href="#" class="block">FAQs <i class="fa fa-angle-double-right text-white font-13 m-left-xs"></i></a></li>-->
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-1">
+        <div class="footer-col-style">
+          <div>Find A Couple:</div>
+          <div class="footer-margin">
+            <div><input id="Text1" type="text" placeholder="First Name" /></div>
+            <div><input id="Text1" type="text" placeholder="Last Name" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-1 text-center">
+        <div class="footer-col-style">
+          <a href="http://www.letsplanevent.com/" class="block"><img src="{{ImageBaseUrl}}assets/Images/letsplanevent-logo-white.png" alt="" /></a>
+          <div class="social-icons clearfix">
+            <ul class="clearfix">
+              <li *ngFor="let socialLink of socialLinks">
+                <a class="{{socialLink.className}}" href="{{socialLink.link}}" target="_blank">{{socialLink.text}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="copy-right">&copy; {{today | date:'yyyy'}} - {{companyName}}</div>
+          <div>All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
