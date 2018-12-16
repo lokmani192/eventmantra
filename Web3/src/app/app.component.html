@@ -1,14 +1,14 @@
 
-<div class="wrapper responsive bs-app guest-nav">
+<div class="wrapper event-wrapper responsive bs-app guest-nav">
   <div class="header-container">
     <app-header></app-header>
   </div>
   <div class="body-container" #body>
     <router-outlet></router-outlet>
   </div>
-  <div class="clear-fix footer-container {{isFooterFixed?'position-absolute':''}}">
+  <footer class="clear-fix event-footer {{isFooterFixed?'position-absolute':''}}">
     <app-footer></app-footer>
-  </div>
+  </footer>
 </div>
   <a href="#" class="scroll-to-top active" id="scroll-to-top-arrow"><i class="fa fa-arrow-up"></i></a>
 

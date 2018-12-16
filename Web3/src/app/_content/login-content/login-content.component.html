@@ -1,0 +1,49 @@
+<div class="text-center" id="loginContent">
+  <div class="font-26 text-center p-bottom-sm block centered">Login to <span class="font-semi-bold">Letsplanevent.com</span></div>
+  <div class="errors">
+    <div class="error" id="error_fb"></div>
+    <div class="error m-top-sm font-semi-bold" id="login_errors"></div>
+  </div>
+  <div class="row m-top-md">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <input type="text" name="emaillogin" id="txtemaillogin" placeholder="Email Address" class="input-lg form-control input-rounded" value="">
+            <div id="error_txtemaillogin" class="container-fluid error font-12 text-left err-left-md hide">Email is required.</div>
+          </div>
+          <div class="form-group m-top-md">
+            <input type="password" placeholder="Password" class="input-lg form-control input-rounded" name="txtpasswordlogin" id="txtpwdlogin">
+            <div id="error_txtpwdlogin" class="container-fluid hide error font-12 text-left err-left-md">Password is required.</div>
+          </div>
+          <div class="container-fluid text-left pad-md">
+            <div class="checkbox font-14">
+              <label>
+                <input type="checkbox" name="remember">
+                <div class="animated-checkbox">
+                  <div>
+                    <span></span>
+                  </div>
+                </div>
+                Remember my email on this computer
+              </label>
+            </div>
+          </div>
+          <button type="button" class="btn btn-blue btn-light btn-rounded btn-ripple m-top-xs m-bottom-sm text-upper font-14" id="btnLoginPop">Login</button>
+          <div class="m-bottom-sm font-14 text-center"><a href="#" id="forgotPasswordLink">Forgot Your Password? <i class="fa fa-angle-double-right text-normal font-10"></i></a></div>
+          <div class="text-line-separate">
+            <span><b>or</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="https://www.facebook.com/dialog/oauth?client_id=882488531798121&amp;redirect_uri=http%3A%2F%2Fwww.letsplanevent.com%3Fuevt_auth%3Dreturn&amp;state=ish458e44c790f004818a6e51a346ef0b5&amp;scope=email,user_photos,user_birthday,user_likes,user_events" login="0" class="clearfix btn-rounded btn btn-blue text-upper m-top-sm font-14 fconnect_login">
+    <img src="{{ImageBaseUrl}}assets/Images/fb-white.png" alt="" class="m-right-sm">
+    Connect With Facebook
+  </a>
+  <div class="m-top-sm text-grey font-12"><b>We don't post anything without your permission.</b></div>
+  <input type="hidden" value="1" name="login_process">
+  <input type="hidden" name="md5pass" id="md5pass">
+  <input type="hidden" name="md5pass_utf" id="md5pass_utf">
+</div>

@@ -1,14 +1,26 @@
-<!--<h1>Home</h1>-->
+<div class="page-header-bg home-header text-center btn-large-container">
+  <div class="bg-image-container">
+    <div id="snowBg" style="position:absolute;top:0;left:0;right:0;bottom:0;"></div>
+  </div>
+  <div class="header-bg-content inline-block fbSignupBlock">
+    <h1 class="text-lg text-header"><strong>Your Free Online Event Planner</strong></h1>
+    <div class="text-sm">Everything you need for your event in one place</div>
+
+    <div class="m-t-40">
+      <a class="btn btn-lg btn-pink btn-ripple btn-rounded m-r-20 no-m-xs" href="#signupModal" data-toggle="modal" id="initialSignupBtn"><span class="ink ripple-animate" style="height: 260px; width: 260px; top: -114px; left: 18.2813px;"></span>EMAIL SIGNUP</a><br class="visible-xs">
+      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-xs fconnectRemodel3" href="https://www.facebook.com/dialog/oauth?client_id=118078171691558&amp;redirect_uri=https%3A%2F%2Fwww.wedding.com%2F%3Fwed_auth%3Dregister&amp;state=884aef9ba35d2ab753d3add89be83b78&amp;scope=email" data-login="0"><span class="ink ripple-animate" style="height: 260px; width: 260px; top: -108px; left: 41.7344px;"></span>FACEBOOK SIGNUP</a>
+    </div>
+    <img src="https://d2i1877txwywxu.cloudfront.net/functions/img/remodel3/min/thumb-m.jpg" class="hide" style="display:none;">
+
+    <p class="m-t-30 text-center h5 font-normal">
+      <a href="https://www.wedding.com/couple-search.php" class="text-white">Find Couples »</a>
+    </p>
+  </div>
+</div>
+
+
 <h2 *ngIf="userFromApi">Hello <span style="color:#ff0000">{{userFromApi.firstName|titlecase}} {{userFromApi.lastName|titlecase}}</span> !</h2>
-<p>You're logged in with Angular 7 & JWT!!</p>
 <!--<p>Your role is: <strong>{{currentUser.role}}</strong>.</p>-->
-<p>This page can be accessed by all authenticated users.</p>
-<p>This page can be accessed by all authenticated users.</p>
-<p>This page can be accessed by all authenticated users.</p>
-<p>This page can be accessed by all authenticated users.</p>
-<p>This page can be accessed by all authenticated users.</p>
-<p>This page can be accessed by all authenticated users.</p>
-<p>This page can be accessed by all authenticated users.</p>
 <div>
   Current user from secure api end point:
   <ul>

@@ -10,6 +10,94 @@
     padding-right: 25px;
     }
 }
+h4,.h4 { margin-top: 18px; font-size:18px }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #4b4b4b;
+}
+a { color: #ababab }
+a:hover { color: #4b4b4b }
+.footer-row { position: relative}
+.footer-row .footer-col {float: left}
+
+@media (max-width:767px) {
+ .footer-row .footer-col {
+    float: none;
+    width: auto !important;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 !important
+  }
+}
+
+.footer-row .footer-col:first-child {  width: 288px }
+@media (min-width:1200px) and (max-width:1309px) {
+  .footer-row .footer-col:first-child { width: 251px }
+}
+
+@media (max-width:1199px) {
+  .footer-row .footer-col:first-child {
+    width: auto;
+    text-align: center;
+    float: none;
+    margin-bottom: 30px
+  }
+}
+
+.footer-row .footer-col:nth-child(2) { width: 223px }
+
+@media (min-width:1200px) and (max-width:1309px) {
+  .footer-row .footer-col:nth-child(2) {width: 201px }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+   .footer-row .footer-col:nth-child(2) { width: 218px }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+   .footer-row .footer-col:nth-child(2) { width: 268px }
+}
+.footer-row .footer-col:nth-child(3) { width: 256px }
+
+@media (min-width:1200px) and (max-width:1309px) {
+ .footer-row .footer-col:nth-child(3) { width: 234px }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+ .footer-row .footer-col:nth-child(3) { width: 251px }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .footer-row .footer-col:nth-child(3) { width: 281px }
+}
+.footer-row .footer-col:nth-child(4) { width: 241px }
+
+@media (min-width:1200px) and (max-width:1309px) {
+ .footer-row .footer-col:nth-child(4) { width: 219px }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .footer-row .footer-col:nth-child(4) { width: 236px }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+ .footer-row .footer-col:nth-child(4) { width: 171px }
+}
+
+@media (max-width:991px) {
+  .footer-row .footer-col:last-child {
+    float: none;
+    width: auto;
+    text-align: center;
+    padding-top: 10px;
+    clear: left;
+    width: 100%
+  }
+}
+
+
+
+
+
 
 .footer:not(.fixed-footer) {
   z-index: 100;

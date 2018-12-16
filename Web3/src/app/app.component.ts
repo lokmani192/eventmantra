@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener, ViewEncapsulation } from '@angular/core';
 import { User, Role } from './_models';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './_services';
@@ -7,7 +7,8 @@ import {AppConstants} from './app.constants';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  //encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
     currentUser: User;

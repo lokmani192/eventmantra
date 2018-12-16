@@ -1,0 +1,57 @@
+@mixin bgImage($imageName,$ext) {
+  $url: "~src/assets/Images/#{$imageName}.#{$ext}";
+  background-image: url($url);
+}
+.page-header-bg {
+  position: relative;
+  height: 520px;
+  color: #fff;
+  z-index: 3;
+}
+.home-header {
+  width: 100%;
+  height: 640px;
+  padding-top: 220px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .home-header .bg-image-container {
+    @include bgImage(home/header,jpg);
+  }
+}
+.page-header-bg .bg-image-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.home-header .bg-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  animation: bg-zoom 15s infinite alternate;
+  -webkit-animation: bg-zoom 15s infinite alternate;
+}
+.page-header-bg {
+  position: relative;
+  height: 520px;
+  color: #fff;
+  z-index: 3;
+}
+.page-header-bg .header-bg-content {
+  position: relative;
+  z-index: 2;
+}
+.home-header .text-lg {
+  color: #fff;
+  font-size: 75px;
+}
+.page-header-bg .text-sm {
+  font-size: 20px;
+}

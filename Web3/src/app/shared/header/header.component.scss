@@ -812,14 +812,11 @@ div#dp-popup table thead {
 }
 
 .top-navigation {
-  background-color: #790232;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 500;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 .top-navigation * {

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppConstants } from '../../app.constants';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { LoginModalComponent } from '../../_modals/login-modal/login-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -21,6 +22,8 @@ export class HeaderComponent implements OnInit {
   }
 
   openCenteredModal(content) {
-    this.modalService.open(content, { size:'lg',centered: true, windowClass:'modal-wrapper no-header active'});
+    const modalRef = this.modalService.open(LoginModalComponent, { size: 'lg', centered: true, windowClass: 'modal-wrapper no-header active' });
+    modalRef.componentInstance.title = 'About';
+    //this.modalService.open(content, { size:'lg',centered: true, windowClass:'modal-wrapper no-header active'});
   }
 }

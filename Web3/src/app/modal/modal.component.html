@@ -1,0 +1,25 @@
+   <div class="modal-header text-center">
+      <a class="close modal-close-button" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </a>
+    </div>
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+    <div class="modal-footer text-center">
+      <div>
+        <div class="text-muted m-top-sm">
+          <strong class="inline-block">Are you a Vendor? <a href="http://www.letsplanevent.com/vendor-registration" class="font-semi-bold">Sign Up Now!</a></strong>
+          <strong class="inline-block m-left-right-15">/</strong>
+          <strong class="inline-block"><span class="">Don't have an account? </span> <a href="#register" class="font-semi-bold" data-toggle="modal">Sign Up Now!</a></strong>
+        </div>
+        <p class="font-12 m-top-md m-bottom-md">
+          <b>
+            By Clicking "Connect with Facebook" or "Start Planning"
+            <br />
+            you confirm that you accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </b>
+        </p>
+      </div>
+    </div>
+  
