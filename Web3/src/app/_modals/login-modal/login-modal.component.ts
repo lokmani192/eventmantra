@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { LoginContentComponent } from '../../_content/login-content/login-content.component';
 
 @Component({
   selector: 'app-login-modal',
@@ -7,9 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LoginModalComponent implements OnInit {
   @Input() title = 'Register';
-  constructor() { }
+  isLogin = true;
+  isForgotPassword=false;
+  constructor() {
+    //this.isLogin ? this.isForgotPassword = false : this.isForgotPassword = true;
+    
+  }
 
   ngOnInit() {
+  }
+  displayLogin(val) {
+    this.isForgotPassword = val;
+    if (val) {
+      this.isLogin = false;
+    }
   }
 
 }

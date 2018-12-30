@@ -1,165 +1,63 @@
-<div class="top-navigation fixed-top">
-  <div class="container container-lg">
-    <!-- Mobile Navigation -->
-    <div class="navbar_header">
-      <button type="button" class="navbar-toggle" id="navbar-toggle1">
-        <i class="fa fa-bars"></i>
-      </button>
-      <a data-toggle="collapse" href="#search-div" aria-expanded="false" aria-controls="search-div" class="collapsed search-toggle-top"><i class="fa fa-search"></i></a>
-
-      <div class="navbar-collapse-right d-block d-sm-none">
-        <ul>
-          <li class="">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Started</a>
-            <ul class="dropdown-menu pull-right">
-              <li><a href="#LoginModal" data-toggle="modal"><i class="fa fa-lock m-right-xs"></i> Login</a></li>
-              <li></li>
-              <li><a href="#signupModal" data-toggle="modal" class="font-semi-bold">Users Register Now!</a></li>
-              <li><a href="http://www.letsplanevent.com/vendor-registration" class="font-semi-bold">Vendors Join Now!</a></li>
-            </ul>
-          </li>
+<nav class="wedding-header guest-header transparent-header">
+  <div class="container-fluid clearfix">
+    <div class="nav-brand">
+      <a href="{{websiteUrl}}">
+        <img src="{{ImageBaseUrl}}assets/Images/letsplanevent-logo-white.png" class="logo-white" width="150">
+        <img src="{{ImageBaseUrl}}assets/Images/letsplanevent-logo-color.png" class="logo-dark" width="150">
+      </a>
+    </div>
+    <div class="nav-toggle" data-toggle="collapse" data-target="#navMobile">
+      <span class="pointer">
+        <img src="{{ImageBaseUrl}}assets/Images/toggle.png">
+        <img src="{{ImageBaseUrl}}assets/Images/toggle-white.png" class="toggle-white">
+      </span>
+    </div>
+    <div class="nav-collapse">
+      <div class="nav-item header-notification">
+        <a href="{{websiteUrl}}vendor-signup" class="btn btn-blue btn-ripple btn-rounded m-r-10 d-none d-xs-none d-sm-none d-md-inline-block">VENDORS SIGNUP</a>
+        <a href="#loginModal" (click)="openCenteredModal('loginModal')" class="btn btn-pink btn-ripple btn-rounded no-m-xs">LOGIN<span class="d-none d-xs-none d-sm-none d-md-inline"> NOW</span></a>
+      </div>
+      <div class="nav-item header-nav d-none d-xs-none d-sm-none d-md-block">
+        <ul class="list-unstyled clearfix no-m-b">
+          <li><a href="{{websiteUrl}}create-wedding-registry">REGISTRY</a></li>
+          <li><a href="{{websiteUrl}}create-wedding-websites">WEBSITES</a></li>
+          <li><a href="{{websiteUrl}}planning-tools">PLANNING TOOLS</a></li>
+          <li><a href="{{websiteUrl}}vendors">VENDORS</a></li>
         </ul>
-      </div><!-- ./navbar-collapse-right -->
-
-      <a class="brand" href="http://www.letsplanevent.com/"><img src="{{ImageBaseUrl}}assets/Images/letsplanevent-logo-white.png" alt="logo"></a>
+      </div>
     </div>
-    <!-- End Mobile Navigation -->
+  </div>
 
-    <div id="nav-toggle1" class="navbar-collapse-left">
-      <ul>
-        <li class="inspire-link ">
-          <a href="http://www.letsplanevent.com/event-inspiration">Inspiration</a>
-        </li>
-        <li class="vendor-link ">
-          <a href="http://www.letsplanevent.com/professionals">Vendors</a>
-        </li>
-        <li class="tool-link dropdown-hover">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Planning Tools</a>
-          <ul class="dropdown-menu">
-            <li><a href="#LoginModal" data-toggle="modal">Wedding Website</a></li>
-            <li><a href="#LoginModal" data-toggle="modal">Cash Registry</a></li>
-            <li><a href="#LoginModal" data-toggle="modal">RSVP Tools</a></li>
-            <li><a href="#LoginModal" data-toggle="modal">Budget Tracker</a></li>
-            <li><a href="#LoginModal" data-toggle="modal">Wedding Checklist</a></li>
-          </ul>
-        </li>
+  <div class="nav-collapse-xs collapse" id="navMobile">
+    <div class="nav-collapse-inner">
+      <ul class="list-unstyled item-list no-m-b">
+        <li><a href="{{websiteUrl}}create-wedding-registry" class="hover-dark"><b>REGISTRY</b></a></li>
+        <li><a href="{{websiteUrl}}create-wedding-websites" class="hover-dark"><b>WEDDING WEBSITES</b></a></li>
+        <li><a href="{{websiteUrl}}planning-tools" class="hover-dark"><b>PLANNING TOOLS</b></a></li>
+        <li><a href="{{websiteUrl}}vendors" class="hover-dark"><b>VENDORS</b></a></li>
+        <li><a href="{{websiteUrl}}couple-search.php" class="hover-dark"><b>FIND COUPLES</b></a></li>
       </ul>
-    </div><!-- navbar-collapse-left -->
 
-    <div class="navbar-collapse-right hidden-xs">
-      <ul>
-        <li class="hidden-sm">
-          <span class="text-upper">Vendors: </span>
-          <a href="http://www.letsplanevent.com/vendor-registration" class="pink">Join Now!</a>
-        </li>
-        <li class="hidden-sm">
-          <span class="text-upper">Users: </span>
-          <a href="#signupModal" data-toggle="modal">Register Now!</a>
-        </li>
-        <li class="d-none d-sm-block d-md-none">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Started</a>
-          <ul class="dropdown-menu pull-right">
-            <li><a href="#LoginModal" data-toggle="modal"><i class="fa fa-lock m-right-xs"></i> Login</a></li>
-            <li class="divider"></li>
-            <li><a href="#signupModal" data-toggle="modal" class="font-semi-bold">Users Register Now!</a></li>
-            <li><a href="http://www.letsplanevent.com/vendor-registration" class="font-semi-bold">Vendors Join Now!</a></li>
-          </ul>
-        </li>
-        <li class="hidden-sm"><a href="#LoginModal" (click)="openCenteredModal(loginModal)" >Login</a></li>
-      </ul>
-    </div><!-- ./navbar-collapse-right -->
-  </div><!-- ./container -->
-</div>
-<!--<ng-template #loginModal let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title">Login to Letsplanevent.com</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p>One fine body&hellip;</p>
-  </div>
-  <div class="modal-footer">
-
-  </div>
-</ng-template>-->
-
-<ng-template #loginModal let-c="close" let-d="dismiss">
-  
-  <div class="modal-header text-center">
-    <a class="close modal-close-button" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </a>
-  </div>
-  <div class="modal-body text-center" id="loginContent">
-
-    <div class="font-26 text-center p-bottom-sm block centered">Login to <span class="font-semi-bold">Letsplanevent.com</span></div>
-     <div class="errors">
-      <div class="error" id="error_fb"></div>
-      <div class="error m-top-sm font-semi-bold" id="login_errors"></div>
-    </div>
-     <div class="row m-top-md">
-       <div class="col-sm-8 col-sm-offset-2">
-         <div class="row">
-           <div class="col-12">
-             <div class="form-group">
-               <input type="text" name="emaillogin" id="txtemaillogin" placeholder="Email Address" class="input-lg form-control input-rounded" value="">
-               <div id="error_txtemaillogin" class="container-fluid error font-12 text-left err-left-md hide">Email is required.</div>
-             </div>
-             <div class="form-group m-top-md">
-               <input type="password" placeholder="Password" class="input-lg form-control input-rounded" name="txtpasswordlogin" id="txtpwdlogin">
-               <div id="error_txtpwdlogin" class="container-fluid hide error font-12 text-left err-left-md">Password is required.</div>
-             </div>
-             <div class="container-fluid text-left pad-md">
-               <div class="checkbox font-14">
-                 <label>
-                   <input type="checkbox" name="remember">
-                   <div class="animated-checkbox">
-                     <div>
-                       <span></span>
-                     </div>
-                   </div>
-                   Remember my email on this computer
-                 </label>
-               </div>
-             </div>
-             <button type="button" class="btn btn-blue btn-light btn-rounded btn-ripple m-top-xs m-bottom-sm text-upper font-14" id="btnLoginPop">Login</button>
-             <div class="m-bottom-sm font-14 text-center"><a href="#" id="forgotPasswordLink">Forgot Your Password? <i class="fa fa-angle-double-right text-normal font-10"></i></a></div>
-             <div class="text-line-separate">
-               <span><b>or</b></span>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     <a href="https://www.facebook.com/dialog/oauth?client_id=882488531798121&amp;redirect_uri=http%3A%2F%2Fwww.letsplanevent.com%3Fuevt_auth%3Dreturn&amp;state=ish458e44c790f004818a6e51a346ef0b5&amp;scope=email,user_photos,user_birthday,user_likes,user_events" login="0" class="clearfix btn-rounded btn btn-blue text-upper m-top-sm font-14 fconnect_login">
-      <img src="{{ImageBaseUrl}}assets/Images/fb-white.png" alt="" class="m-right-sm">
-      Connect With Facebook
-    </a>
-    <div class="m-top-sm text-grey font-12"><b>We don't post anything without your permission.</b></div>
-    <input type="hidden" value="1" name="login_process">
-    <input type="hidden" name="md5pass" id="md5pass">
-    <input type="hidden" name="md5pass_utf" id="md5pass_utf">
-
-  </div><!-- ./modal-body -->
-
-      
-      <div class="modal-footer text-center">
-        <div>
-          <div class="text-muted m-top-sm">
-            <strong class="inline-block">Are you a Vendor? <a href="http://www.letsplanevent.com/vendor-registration" class="font-semi-bold">Sign Up Now!</a></strong>
-            <strong class="inline-block m-left-right-15">/</strong>
-            <strong class="inline-block"><span class="">Don't have an account? </span> <a href="#register" class="font-semi-bold" data-toggle="modal">Sign Up Now!</a></strong>
-          </div>
-          <p class="font-12 m-top-md m-bottom-md">
-            <b>
-              By Clicking "Connect with Facebook" or "Start Planning"
-              <br />
-              you confirm that you accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-            </b>
-          </p>
+      <div class="row m-t-20">
+        <div class="col-xs-6">
+          <a href="{{websiteUrl}}?register" class="btn btn-blue btn-block btn-rounded width-100 btn-size-responsive">Bride Signup</a>
+        </div>
+        <div class="col-xs-6">
+          <a href="{{websiteUrl}}vendor-signup" class="btn btn-pink btn-block btn-rounded width-100 btn-size-responsive">Vendor Signup</a>
         </div>
       </div>
-   
-</ng-template>
+
+      <p class="line-28 text-center m-t-30">
+        <span class="font-12 l-s-1"><b>HELP</b></span><br>
+        <span class="text-dark">
+          {{contactEmail}}<br>
+          <span class="text-dark">{{contactPhoneNo}}</span>
+        </span>
+      </p>
+    </div>
+  </div><!-- /.nav-collapse-xs -->
+</nav>
+
+
+
+

@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,7 @@ import { ModalComponent } from './modal/modal.component';
 import { LoginModalComponent } from './_modals/login-modal/login-modal.component';
 import { LoginContentComponent } from './_content/login-content/login-content.component';
 import { ForgotPasswordContentComponent } from './_content/forgot-password-content/forgot-password-content.component';
+import { ForgotPasswordModalComponent } from './_modals/forgot-password-modal/forgot-password-modal.component';
 
 
 @NgModule({
@@ -33,14 +36,18 @@ import { ForgotPasswordContentComponent } from './_content/forgot-password-conte
     ModalComponent,
     LoginModalComponent,
     LoginContentComponent,
-    ForgotPasswordContentComponent
+    ForgotPasswordContentComponent,
+    ForgotPasswordModalComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

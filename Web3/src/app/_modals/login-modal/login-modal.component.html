@@ -1,4 +1,4 @@
 <app-modal>
-  <app-login-content></app-login-content>
-  <!--<app-forgot-password-content></app-forgot-password-content>-->
+  <app-login-content *ngIf="isLogin" (valueCount)='displayLogin($event)'></app-login-content>
+  <app-forgot-password-content *ngIf="isForgotPassword"></app-forgot-password-content>
 </app-modal>

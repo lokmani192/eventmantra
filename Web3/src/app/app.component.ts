@@ -8,11 +8,12 @@ import {AppConstants} from './app.constants';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  //encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
     currentUser: User;
     isFooterFixed: boolean = false;
+    ImageBaseUrl=AppConstants.ImageBaseUrl;
     today: number = Date.now();
     constructor(
         private element: ElementRef,
@@ -38,7 +39,6 @@ export class AppComponent {
 
     @HostListener('window:load', ['$event'])
     onLoad(event) {
-      console.log("load");
       this.resize();
     }
 
@@ -52,4 +52,12 @@ export class AppComponent {
         this.isFooterFixed = true;
       }
     }
+    scrollTopClick() {
+      window.scrollTo(0,0);
+    }
+    //$(window).scroll(function() {
+    //  var position = $(window).scrollTop(); if (position >= 200) { $('.scroll-top').addClass('active'); }
+    //  else { $('.scroll-top').removeClass('active'); }
+    //}); $(".scroll-top").click(function() { $("html, body").animate({ scrollTop: 0 }, 600); return false; });
+
 }

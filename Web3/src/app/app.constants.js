@@ -5,6 +5,7 @@ var environment_1 = require("../environments/environment");
 var AppConstants = /** @class */ (function () {
     function AppConstants() {
     }
+    AppConstants.WebsiteUrl = environment_1.environment.websiteUrl;
     AppConstants.WebsiteName = 'Letsplanevent.com';
     AppConstants.ImageBaseUrl = environment_1.environment.imageBaseUrl;
     AppConstants.ContactPhoneNo = '783 868 0532';

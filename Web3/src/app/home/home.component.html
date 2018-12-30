@@ -1,29 +1,143 @@
 <div class="page-header-bg home-header text-center btn-large-container">
-  <div class="bg-image-container">
-    <div id="snowBg" style="position:absolute;top:0;left:0;right:0;bottom:0;"></div>
-  </div>
+  
+    <div class="bg-image-container">
+      <div id="snowBg" style="position:absolute;top:0;left:0;right:0;bottom:0;"></div>
+    </div>
+
   <div class="header-bg-content inline-block fbSignupBlock">
     <h1 class="text-lg text-header"><strong>Your Free Online Event Planner</strong></h1>
-    <div class="text-sm">Everything you need for your event in one place</div>
+    <div class="text-sm font-20">Everything you need for your event in one place</div>
 
-    <div class="m-t-40">
-      <a class="btn btn-lg btn-pink btn-ripple btn-rounded m-r-20 no-m-xs" href="#signupModal" data-toggle="modal" id="initialSignupBtn"><span class="ink ripple-animate" style="height: 260px; width: 260px; top: -114px; left: 18.2813px;"></span>EMAIL SIGNUP</a><br class="visible-xs">
-      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-xs fconnectRemodel3" href="https://www.facebook.com/dialog/oauth?client_id=118078171691558&amp;redirect_uri=https%3A%2F%2Fwww.wedding.com%2F%3Fwed_auth%3Dregister&amp;state=884aef9ba35d2ab753d3add89be83b78&amp;scope=email" data-login="0"><span class="ink ripple-animate" style="height: 260px; width: 260px; top: -108px; left: 41.7344px;"></span>FACEBOOK SIGNUP</a>
+    <div class="m-t-60">
+      <a class="btn btn-lg btn-pink btn-ripple btn-rounded home-signup-btn m-r-20" href="#signupModal" data-toggle="modal" id="initialSignupBtn"><span class="ink ripple-animate"></span>EMAIL SIGNUP</a>
+      <br class="d-block d-sm-none">
+      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-sm fconnectRemodel3" href="https://www.facebook.com/dialog/oauth?client_id=1180781716&amp;redirect_uri=https%3A%2F%2Fwww.letsplanevent.com.com%2F%3Fwed_auth%3Dregister&amp;state=884aef9ba35d2ab753d3add89be83b78&amp;scope=email" data-login="0"><span class="ink ripple-animate"></span>FACEBOOK SIGNUP</a>
     </div>
-    <img src="https://d2i1877txwywxu.cloudfront.net/functions/img/remodel3/min/thumb-m.jpg" class="hide" style="display:none;">
-
-    <p class="m-t-30 text-center h5 font-normal">
-      <a href="https://www.wedding.com/couple-search.php" class="text-white">Find Couples »</a>
-    </p>
   </div>
 </div>
 
+<section class="home-section home-sec-1 home-sec-p-xs section-column-2 pad-xs p-b-0">
 
-<h2 *ngIf="userFromApi">Hello <span style="color:#ff0000">{{userFromApi.firstName|titlecase}} {{userFromApi.lastName|titlecase}}</span> !</h2>
-<!--<p>Your role is: <strong>{{currentUser.role}}</strong>.</p>-->
+  <div class="container-fluid p-b-50 text-center">
+    <h2 class="home-text-header text-header text-dark font-50 no-m"><strong>Everything You Need to Plan Your Event</strong></h2>
+    <p class="h4 text-normal font-normal font-18 line-30">
+      Your Event Registry, Vendors, Event Website, Checklist, Budget all in one place.
+    </p>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}#guest-list" alt="Guest list" title="Guest list"><img src="{{imageBaseUrl}}assets/Images/home/tool-guest.png" alt="" width="100"></a>
+        <h4 class="m-t-20"><b>Guest list</b></h4>
+        <p class="h5 text-muted line-28">Easily manage your guest lists, track your RSVP's, and thank you cards in one place.</p>
+      </div>
+
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}create-wedding-registry" alt="Registry" title="Registry"><img src="{{imageBaseUrl}}assets/Images/home/tool-registry.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Registry</h4>
+        <p class="h5 text-muted line-28">Thousands of registry items to choose from, cash registries and experiences.</p>
+      </div>
+
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}#vendors" alt="Vendors" title="Vendors"><img src="{{imageBaseUrl}}assets/Images/home/tool-vendors.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Vendors</h4>
+        <p class="h5 text-muted line-28">Get proposals from local vendors based on your budget , location and needs.</p>
+      </div>
+
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}create-wedding-websites" alt="Wedding Website" title="Wedding Website"><img src="{{imageBaseUrl}}assets/Images/home/tool-website.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Event Website</h4>
+        <p class="h5 text-muted line-28">Choose from a variety of modern unique website themes.</p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}community" alt="Inspiration" title="Inspiration"><img src="{{imageBaseUrl}}assets/Images/home/tool-vision.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Inspiration</h4>
+        <p class="h5 text-muted line-28">Get Inspired from our community of writers and event vendors.</p>
+      </div>
+
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}planning-tools#checklist" alt="Checklist" title="Checklist"><img src="{{imageBaseUrl}}assets/Images/home/tool-checklist.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Checklist</h4>
+        <p class="h5 text-muted line-28">Our checklist reminds you of everything you need for your big day.</p>
+      </div>
+
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}planning-tools#budget" alt="Budget" title="Budget"><img src="{{imageBaseUrl}}assets/Images/home/tool-budget.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Budget</h4>
+        <p class="h5 text-muted line-28">Stay on budget with our budget tracker.</p>
+      </div>
+
+      <div class="col-sm-6 col-md-3 m-t-60">
+        <a href="{{websiteUrl}}community" alt="Community" title="Community"><img src="{{imageBaseUrl}}assets/Images/home/tool-community.png" alt="" width="100"></a>
+        <h4 class="m-t-20">Community</h4>
+        <p class="h5 text-muted line-28">Ask questions of our community and get inspired by other couples.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="bottom-line float-right line-inside" style="width: 184.5px;"></div>
+</section>
+
+
+<section class="home-section pad-sm section-column-2 bg-grey-light">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 text-center-xs text-center-sm">
+        <h2 class="home-text-header text-header font-50 text-dark no-m"><strong>Easily Manage Your Guest List, RSVP's and Thank You cards in one location.</strong></h2>
+        <p class="h4 text-normal font-normal m-t-10 m-b-10 line-30">
+          Save Time by having everything in one place.
+        </p>
+
+        <div class="">
+          <div class="offset-sm-3 offset-md-0">
+            <ul class="list-unstyled list-icon-group h5 font-normal text-muted line-32 m-t-30 text-left m-b-60">
+              <li class="m-b-20">
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Integrate with your Wedding Website</div>
+              </li>
+              <li class="m-b-20">
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Import all your contacts into your Guest List</div>
+              </li>
+              <li>
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Track RSVP's and Meal Preferences</div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /.col -->
+      <div class="col-lg-6 m-t-30-xs m-t-30-sm">
+        <img src="{{imageBaseUrl}}assets/Images/home/rsvp-home.jpg" class="item-shadow img-responsive">
+      </div>
+    </div><!-- /.row -->
+  </div>
+
+  <div class="bottom-line float-right line-inside" style="width: 184.5px;"></div>
+</section>
+
+<section class="home-section home-sec-last btn-large-container text-center fbSignupBlock">
+  <div class="container-fluid">
+    <div class="text-sm">The Only Event Social Network</div>
+    <h2 class="text-lg text-header text-white">Your Event, Your Choice!</h2>
+
+    <div class="m-t-40">
+      <a href="#signupModal" data-toggle="modal" class="btn btn-lg btn-pink btn-ripple btn-rounded m-r-20 no-m-xs">EMAIL SIGNUP</a>
+      <br class="d-block d-sm-none">
+      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-xs fconnectRemodel3" href="https://www.facebook.com/dialog/oauth?client_id=118078178&amp;redirect_uri=https%3A%2F%2Fwww.letsplanevent.com%2F%3Fwed_auth%3Dregister&amp;state=707785d861839834098b95dcdf21f161&amp;scope=email" data-login="0">FACEBOOK SIGNUP</a>
+    </div>
+  </div>
+
+  <div class="bottom-line float-right" style="width: 184.5px;"></div>
+</section>
+<!--<h2 *ngIf="userFromApi">Hello <span style="color:#ff0000">{{userFromApi.firstName|titlecase}} {{userFromApi.lastName|titlecase}}</span> !</h2>
+<p>Your role is: <strong>{{currentUser.role}}</strong>.</p>
 <div>
   Current user from secure api end point:
   <ul>
     <li *ngIf="userFromApi">{{userFromApi.firstName}} {{userFromApi.lastName}}</li>
   </ul>
-</div>
+</div>-->

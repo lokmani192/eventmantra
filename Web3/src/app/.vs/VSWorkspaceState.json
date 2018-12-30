@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\home",
-    "\\shared",
-    "\\shared\\directives",
-    "\\shared\\footer",
-    "\\shared\\header"
+    "\\modal",
+    "\\shared"
   ],
-  "SelectedNode": "\\home\\home.component.html",
+  "SelectedNode": "\\modal\\modal.component.html",
   "PreviewInSolutionExplorer": false
 }

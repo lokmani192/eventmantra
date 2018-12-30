@@ -1,6 +1,7 @@
 import { SocialLink } from './_classes/social-link';
 import { environment } from '../environments/environment';
 export class AppConstants{
+  public static WebsiteUrl = environment.websiteUrl;
   public static WebsiteName='Letsplanevent.com';
   public static ImageBaseUrl = environment.imageBaseUrl;
   public static ContactPhoneNo = '783 868 0532';

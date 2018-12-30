@@ -8,13 +8,21 @@ module.exports = {
     authenticate,
     getAll,
     getById,
+    getByMobileNo,
+    getByEmail,
     create,
     update,
     delete: _delete
 };
 
-async function authenticate({ username, password }) {
-    const user = await User.findOne({ username });
+async function authenticate({ username, password, loginMethod }) {
+    let user;
+    if (loginMethod == 'phoneLogin') {
+        user = await User.findOne({ mobileNo:username });
+    }
+    if (loginMethod == 'emailLogin') {
+        user = await User.findOne({ email:username });
+    }
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
         const token = jwt.sign({ sub: user.id }, config.secret, {expiresIn:config.tokenExpirationTime});
@@ -32,6 +40,28 @@ async function getAll() {
 
 async function getById(id) {
     return await User.findById(id).select('-hash');
+}
+
+async function getByMobileNo({ mobileNo }) {
+    const user = await User.findOne({ mobileNo });
+    let mobileNoExist = false;
+    if (user) {
+        mobileNoExist = true;
+    }
+    return {
+        mobileNoExist: mobileNoExist
+    }
+}
+async function getByEmail({ email }) {
+    const user = await User.findOne({ email: email });
+    let emailExist = false;
+    if (user) {
+        emailExist = true;
+    }
+    return {
+        emailExist: emailExist
+    }
+    
 }
 
 async function create(userParam) {

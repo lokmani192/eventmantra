@@ -8,6 +8,8 @@ router.post('/register', register);
 router.get('/', getAll);
 router.get('/current', getCurrent);
 router.get('/:id', getById);
+router.post('/checkMobileNo', getByMobileNo);
+router.post('/checkEmail', getByEmail);
 router.put('/:id', update);
 router.delete('/:id', _delete);
 
@@ -39,6 +41,16 @@ function getCurrent(req, res, next) {
 
 function getById(req, res, next) {
     userService.getById(req.params.id)
+        .then(user => user ? res.json(user) : res.sendStatus(404))
+        .catch(err => next(err));
+}
+function getByMobileNo(req, res, next) {
+    userService.getByMobileNo(req.body)
+        .then(user => user ? res.json(user) : res.sendStatus(404))
+        .catch(err => next(err));
+}
+function getByEmail(req, res, next) {
+    userService.getByEmail(req.body)
         .then(user => user ? res.json(user) : res.sendStatus(404))
         .catch(err => next(err));
 }

@@ -1,5 +1,5 @@
 
-<div class="wrapper event-wrapper responsive bs-app guest-nav">
+<div class="wrapper event-wrapper">
   <div class="header-container">
     <app-header></app-header>
   </div>
@@ -10,11 +10,11 @@
     <app-footer></app-footer>
   </footer>
 </div>
-  <a href="#" class="scroll-to-top active" id="scroll-to-top-arrow"><i class="fa fa-arrow-up"></i></a>
+  <div class="scroll-top active text-center" id="scroll-to-top-arrow" (click)="scrollTopClick()"><img src="{{ImageBaseUrl}}assets/Images/home/arrow-top-white.png" alt=""></div>
 
 
 
-  <!--
+  
   <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
       <a class="nav-item nav-link" routerLink="/">Home</a>
@@ -31,4 +31,4 @@
         </div>
       </div>
     </div>
-  </div>-->
+  </div>

@@ -19,6 +19,11 @@
     @include bgImage(home/header,jpg);
   }
 }
+@media (max-width: 767px) {
+  .home-header .bg-image-container {
+    @include bgImage(home/header-sm,jpg);
+  }
+}
 .page-header-bg .bg-image-container {
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,11 +43,8 @@
   animation: bg-zoom 15s infinite alternate;
   -webkit-animation: bg-zoom 15s infinite alternate;
 }
-.page-header-bg {
-  position: relative;
-  height: 520px;
-  color: #fff;
-  z-index: 3;
+.bg-grey-light {
+  background-color: #fafafa;
 }
 .page-header-bg .header-bg-content {
   position: relative;
@@ -52,6 +54,161 @@
   color: #fff;
   font-size: 75px;
 }
-.page-header-bg .text-sm {
+@media(max-width:767px){
+ .home-header .text-lg {
+    font-size: 30px;
+  }
+ .page-header-bg .text-sm {
   font-size: 20px;
+ }
+}
+
+
+
+
+.home-section {
+  position: relative;
+  padding-top: 197px;
+  padding-bottom: 197px
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .home-section {
+    padding-top: 130px;
+    padding-bottom: 130px
+  }
+}
+
+@media (max-width:767px) {
+  .home-section {
+    padding-top: 100px;
+    padding-bottom: 100px
+  }
+}
+
+@media (min-width:992px) {
+  .home-section.pad-sm {
+    padding-top: 140px;
+    padding-bottom: 140px
+  }
+}
+
+@media (min-width:992px) {
+  .home-section.pad-xs {
+    padding-top: 90px;
+    padding-bottom: 90px
+  }
+}
+
+@media (max-width:991px) {
+  .home-section.pad-xs {
+    padding-top: 70px;
+    padding-bottom: 70px
+  }
+}
+
+.home-section.no-p-t {
+  padding-top: 0
+}
+
+.home-section .bg-inner .container {
+  position: relative;
+  z-index: 2
+}
+
+.home-section .text-bg {
+  z-index: -1
+}
+
+.home-sec-last {
+  padding-top: 174px;
+  padding-bottom: 174px;
+  background-size: cover;
+  background-position: center;
+  color: #fff
+}
+
+@media (min-width:768px) {
+  .home-sec-last {
+    @include bgImage(home/bg-image1,jpg);
+    //background-image: url(../../img/remodel3/home/bg-image1.jpg)
+  }
+}
+
+@media (max-width:767px) {
+  .home-sec-last {
+    @include bgImage(home/bg-image1-sm,jpg);
+    //background-image: url(../../img/remodel3/home/bg-image1-sm.jpg)
+  }
+}
+
+.home-sec-last.home-sec-p-xs {
+  padding-top: 100px;
+  padding-bottom: 100px
+}
+
+.home-sec-last.home-sec-p-xs .container {
+  padding-bottom: 0
+}
+
+.home-sec-last .text-sm {
+  font-size: 18px
+}
+
+@media (max-width:767px) {
+  .home-sec-last .text-sm {
+    font-size: 25px
+  }
+}
+
+.home-sec-last .text-lg {
+  font-size: 56px
+}
+
+@media (max-width:767px) {
+  .home-sec-last .text-lg {
+    font-size: 25px;
+    font-family: 'geomanist'
+  }
+}
+.list-icon-group > li {
+  position: relative;
+  padding-left: 40px;
+  min-height: 30px;
+}
+.list-icon-group > li .list-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+item-shadow {
+  box-shadow: 0 15px 30px rgba(50,50,50,0.12),0 -1px 30px rgba(50,50,50,0.06);
+  -webkit-box-shadow: 0 15px 30px rgba(50,50,50,0.12),0 -1px 30px rgba(50,50,50,0.06);
+}
+.home-text-header{
+  line-height:1.5;
+}
+.bottom-line {
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  z-index: 11;
+  background: linear-gradient(to right, #ed3d90 0, #00a6dc 100%);
+}
+.bottom-line.line-inside {
+  bottom: 0;
+}
+.bottom-line.float-right {
+  left: auto;
+  right: 0;
+}
+@media(max-width:767px){
+.home-signup-btn{
+  margin:0!important;
+}
+ .btn-blue.btn-transparent {
+      border: 1px solid #00a6dc;
+    }
+  
 }

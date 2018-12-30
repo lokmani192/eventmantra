@@ -12,6 +12,7 @@ import { SocialLink } from '../../_classes/social-link';
 export class FooterComponent implements OnInit {
 
   today: number = Date.now();
+  websiteUrl: string;
   ImageBaseUrl: string;
   websiteName: string;
   contactEmail: string;
@@ -21,10 +22,11 @@ export class FooterComponent implements OnInit {
   aboutLinks: SocialLink[];
   
   constructor() {
+    this.websiteUrl = AppConstants.WebsiteUrl;
     this.websiteName = AppConstants.WebsiteName;
     this.contactEmail = AppConstants.ContactEmail;
     this.contactPhoneNo = AppConstants.ContactPhoneNo;
-    this.ImageBaseUrl = AppConstants.ImageBaseUrl;
+    this.ImageBaseUrl = AppConstants.ImageBaseUrl; 7
     this.companyName = AppConstants.CompanyName;
     this.socialLinks = AppConstants.SocialLinks;
     this.aboutLinks = AppConstants.AboutLinks;
