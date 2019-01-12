@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\modal",
-    "\\shared"
+    "\\home",
+    "\\login",
+    "\\shared",
+    "\\shared\\header",
+    "\\_content",
+    "\\_content\\login-content",
+    "\\_guards",
+    "\\_modals",
+    "\\_modals\\login-modal"
   ],
-  "SelectedNode": "\\modal\\modal.component.html",
   "PreviewInSolutionExplorer": false
 }

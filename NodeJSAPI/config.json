@@ -1,5 +1,24 @@
 ﻿{
   "connectionString": "mongodb://localhost:27017/eventmantra",
   "secret": "IT CAN BE ANY STRING",
-  "tokenExpirationTime": "1h"
+  "tokenExpirationTime": "1h",
+  "otpTokenExpirationTime": "30m",
+  "mailConfig": {
+    "host": "email-smtp.eu-west-1.amazonaws.com",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "AKIAJUT7BG6MMAPVNDIQ",
+      "pass": "Ammsu40Kn6kHyPJb+0LbF2ahlCcp2pQvcDCBPmsZww+j"
+    }
+  },
+  "msgConfig": {
+    "msgAPIURL": "http://my.msgwow.com/api/postsms.php",
+    "authkey": "171190AVMrWjgSuJ59bd7ba5",
+    "sender": "LETSPL",
+    "route": 4,
+    "compaignname": "campaign name",
+    "countrycode": 91
+
+  }
 }

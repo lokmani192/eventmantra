@@ -12,7 +12,8 @@ function jwt() {
             '/users/authenticate',
             '/users/register',
             '/users/checkMobileNo',
-            '/users/checkEmail'
+            '/users/checkEmail',
+            '/users/sendMessage'
         ]
     });
 }
