@@ -1,5 +1,6 @@
 ﻿require('rootpath')();
 const express = require('express');
+const path = require('path');
 const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
@@ -17,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(jwt());
 
 // api routes
-app.use('/users', require('./users/users.controller'));
+app.use('/users', require('./routes/users/users.controller'));
 
 // global error handler
 app.use(errorHandler);

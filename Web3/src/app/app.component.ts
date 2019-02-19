@@ -2,7 +2,9 @@ import { Component, ElementRef, ViewChild, HostListener, ViewEncapsulation } fro
 import { User, Role } from './_models';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './_services';
-import {AppConstants} from './app.constants';
+import { AppConstants } from './app.constants';
+import { HeaderComponent } from './shared/header/header.component';
+import { AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,12 @@ import {AppConstants} from './app.constants';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent{
     currentUser: User;
     isFooterFixed: boolean = false;
     ImageBaseUrl=AppConstants.ImageBaseUrl;
     today: number = Date.now();
+    isCollapsed = true;
     constructor(
         private element: ElementRef,
         private router: Router,
@@ -54,6 +57,9 @@ export class AppComponent {
     }
     scrollTopClick() {
       window.scrollTo(0,0);
+    }
+    isCollapsedEvent(collapsed) {
+      this.isCollapsed = collapsed;
     }
     //$(window).scroll(function() {
     //  var position = $(window).scrollTop(); if (position >= 200) { $('.scroll-top').addClass('active'); }

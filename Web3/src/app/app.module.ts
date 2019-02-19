@@ -48,6 +48,7 @@ import { ForgotPasswordModalComponent } from './_modals/forgot-password-modal/fo
     NgbModule,
     MatButtonModule,
     MatCheckboxModule
+    
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

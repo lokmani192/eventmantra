@@ -1,7 +1,7 @@
 
 <div class="wrapper event-wrapper">
-  <div class="header-container">
-    <app-header></app-header>
+  <div class="wedding-wrapper header-container" [ngClass]="{'fixed-header':!isCollapsed}">
+    <app-header (isCollapsedEvent)='isCollapsedEvent($event)'></app-header>
   </div>
   <div class="body-container" #body>
     <router-outlet></router-outlet>

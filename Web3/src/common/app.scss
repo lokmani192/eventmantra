@@ -28,7 +28,16 @@ $weights:(400,500,600,700);
 
 @for $j from 5 through 50 {
   .font-#{$j} {
-    font-size: #{$j}px !important;
+    @media(max-width:767px) {
+      font-size: #{$j/1.2}px !important;
+    }
+
+    @media(max-width:500px) {
+      font-size: #{$j/1.5}px !important;
+    }
+    @media(min-width:1200px) {
+      font-size: #{$j}px !important;
+    }
   }
 }
 @for $j from 10 through 50 {
@@ -44,7 +53,7 @@ $weights:(400,500,600,700);
 
   @font-face {
     font-family: 'geomanist';
-    $url: "http://www.letsplanevent.com/assets/fonts/geomanist-regular-webfont.woff2";
+    $url: "http://localhost:4200/assets/fonts/geomanist-regular-webfont.woff2";
     src: url($url);
     //src: url('~src/assets/fonts/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),url('~src/assets/fonts/geomanist-regular-webfont.woff2') format('woff2'),url('~src/assets/fonts/geomanist-regular-webfont.woff') format('woff'),url('~src/assets/fonts/geomanist-regular-webfont.ttf') format('truetype'),url('~src/assets/fonts/geomanist-regular-webfont.svg#geomanist_regularregular') format('svg');
     font-weight: #{$weight};
@@ -696,6 +705,11 @@ input[type=checkbox], input[type=radio] {
       width: 720px
     }
   }
+.help-font {
+  font-size: 12px !important;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
 .scroll-top {
   width: 70px;
   height: 70px;
@@ -710,6 +724,17 @@ input[type=checkbox], input[type=radio] {
   z-index: 11;
   transition: opacity .5s;
   -webkit-transition: opacity .5s;
+}
+@media (max-width:767px) {
+  .scroll-top {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .btn-size-responsive {
+    font-size: 12px !important;
+    padding: 10px 15px !important;
+  }
 }
 
 .scroll-top.active {

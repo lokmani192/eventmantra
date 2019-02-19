@@ -7,5 +7,5 @@ mongoose.connect(config.connectionString).then(
 mongoose.Promise = global.Promise;
 
 module.exports = {
-    User: require('../users/user.model')
+    User: require('../models/user/user.model')
 };

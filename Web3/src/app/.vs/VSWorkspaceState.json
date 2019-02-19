@@ -2,14 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\home",
-    "\\login",
-    "\\shared",
     "\\shared\\header",
-    "\\_content",
+    "\\_content\\forgot-password-content",
     "\\_content\\login-content",
-    "\\_guards",
-    "\\_modals",
     "\\_modals\\login-modal"
   ],
+  "SelectedNode": "\\home\\index.ts",
   "PreviewInSolutionExplorer": false
 }
