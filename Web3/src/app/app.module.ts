@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbActiveModal, NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -33,6 +33,7 @@ import { VendorSignupComponent } from './vendor-signup/vendor-signup.component';
 import { AboutComponent } from './about/about.component';
 import { CategoryHomeComponent } from './shared/category-home/category-home.component';
 import { KeyvaluepaPipe } from './_pipes/keyvaluepa.pipe';
+import { DistancePipe } from './_pipes/distance.pipe';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -85,7 +86,8 @@ export function provideConfig() {
     VendorSignupComponent,
     AboutComponent,
     CategoryHomeComponent,
-    KeyvaluepaPipe
+    KeyvaluepaPipe,
+    DistancePipe
   ],
   imports: [
     BrowserModule,
@@ -104,7 +106,7 @@ export function provideConfig() {
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: AuthServiceConfig, useFactory: provideConfig},
-    NgbActiveModal,
+    NgbActiveModal,NgbDropdown
 
     // provider used to create fake backend
     //fakeBackendProvider

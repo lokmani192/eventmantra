@@ -7,11 +7,11 @@
     <div class="text-sm">Browse and choose through <strong>10946</strong> local wedding vendors near you.</div>
 
     <div class="vendor-landing-search m-t-30 clearfix text-left">
-      <div class="vendor-filter search-cat">
-        <a href="#" class="filter-select-box dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          <b class="cateTitle">Catering Services</b> <span class="caret pull-right m-t-10"></span>
+      <div ngbDropdown class="vendor-filter search-cat">
+        <a ngbDropdownToggle class="filter-select-box dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          <b class="cateTitle">All Categories</b>
         </a>
-        <ul class="dropdown-menu categories-dropdown clearfix">
+        <ul ngbDropdownMenu class="dropdown-menu categories-dropdown clearfix">
           <li class="width-100">
             <a href="https://www.wedding.com/vendors">
               <img src="https://d2i1877txwywxu.cloudfront.net/functions/img/remodel3/category/all.png" alt="" width="30">
@@ -120,33 +120,25 @@
 
       </div>
       <div class="vendor-filter search-location">
-        <input class="form-control input-transparent ui-autocomplete-input" placeholder="CITY or ZIP" id="searchbox_common" name="search" value="" autocomplete="off">
+        <input class="form-control input-transparent ui-autocomplete-input" placeholder="CITY or PINCODE" id="searchbox_common" name="search" value="" autocomplete="off">
         <input type="hidden" id="logined_access" value="0">
         <input type="hidden" id="loc_removed" value="0">
         <input type="hidden" id="searchbox_present" name="searchbox_present" value="">
       </div>
-      <div class="vendor-filter search-anywhere">
-        <a href="#" class="filter-select-box dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          <b class="milesTitle">Distance</b> <span class="caret pull-right m-t-10"></span>
+      <div ngbDropdown class="vendor-filter search-anywhere">
+        <a ngbDropdownToggle class="filter-select-box dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          <b class="milesTitle">{{selectedDistance|distance}}</b>
         </a>
-        <ul class="dropdown-menu">
-          <li><a data-text="25 Miles" data-id="25">25 Miles</a></li>
-          <li><a data-text="50 Miles" data-id="50">50 Miles</a></li>
-          <li><a data-text="75 Miles" data-id="75">75 Miles</a></li>
-          <li><a data-text="100 Miles" data-id="100">100 Miles</a></li>
-          <li><a data-text="150 Miles" data-id="150">150 Miles</a></li>
-          <li><a data-text="300 Miles" data-id="300">300 Miles</a></li>
-          <li><a data-text="500 Miles" data-id="500">500 Miles</a></li>
+        <ul ngbDropdownMenu class="dropdown-menu">
+          <li *ngFor="let dist of distance"><a data-text="{{dist}} KMs" data-id="{{dist}}" (click)="ChangeDistance(dist)">{{dist}} KMs</a></li>
         </ul>
       </div>
-      <div class="vendor-filter search-distance">
-        <a href="#" class="filter-select-box dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          <b class="sortTitle">Sort By</b> <span class="caret pull-right m-t-10"></span>
+      <div ngbDropdown class="vendor-filter search-distance">
+        <a ngbDropdownToggle class="filter-select-box dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          <b class="sortTitle">{{selectedSortBy.text}}</b>
         </a>
-        <ul class="dropdown-menu">
-          <li><a data-text="SORT BY" data-id="">Sort By</a></li>
-          <li><a data-text="By Distance" data-id="1">By Distance</a></li>
-          <li><a data-text="By Reviews" data-id="3">By Reviews</a></li>
+        <ul ngbDropdownMenu class="dropdown-menu">
+          <li *ngFor="let sortBy of sortBy"><a data-text="{{sortBy.text}}" data-id="{{sortBy.id}}" (click)="ChangeSortOrder(sortBy)">{{sortBy.text}}</a></li>
         </ul>
       </div>
     </div>
