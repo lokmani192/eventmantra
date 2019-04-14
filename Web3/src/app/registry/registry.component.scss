@@ -1,0 +1,69 @@
+@mixin bgImage($imageName,$ext) {
+  $url: "~src/assets/Images/#{$imageName}.#{$ext}";
+  background-image: url($url);
+}
+.registry-sec-last {
+  @include bgImage(home/registry-cover2,jpg);
+  //background-image: url(../../img/remodel3/registry/registry-cover2.jpg);
+}
+
+.registry-product-demo-group:not(.demo-static) {
+  height: 400px;
+}
+.registry-product-demo-group .registry-item {
+  display: inline-block;
+  float: none;
+  width: 271px;
+  padding: 0;
+  box-shadow: 0 15px 30px rgba(50,50,50,0.12),0 -1px 30px rgba(50,50,50,0.06);
+  -webkit-box-shadow: 0 15px 30px rgba(50,50,50,0.12),0 -1px 30px rgba(50,50,50,0.06);
+}
+@media (max-width: 1449px) and (min-width: 1310px){
+  .registry-product-demo-group .registry-item {width: 271px;}
+}
+.registry-product-demo-group:not(.demo-static) .registry-item {
+  position: absolute;
+}
+.registry-product-demo-group:not(.demo-static) .registry-item:first-child {
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.registry-product-demo-group:not(.demo-static) .registry-item:nth-child(2) {
+  top: 80px;
+  right: 0;
+}
+.registry-product-demo-group:not(.demo-static) .registry-item:last-child {
+  top: 80px;
+  left: 0;
+}
+.registry-item .relative img {
+  width: 100%;
+}
+@media (max-width: 1449px) and (min-width: 1310px)
+{
+  .registry-item .relative img { height: 259px;}
+}
+.registry-item .registry-content {
+  background-color: #fff;
+  padding: 20px 20px 15px;
+  min-height: 210px;
+  box-shadow: 0 15px 30px rgba(50,50,50,0.12),0 -1px 30px rgba(50,50,50,0.06);
+  -webkit-box-shadow: 0 15px 30px rgba(50,50,50,0.12),0 -1px 30px rgba(50,50,50,0.06);
+}
+.registry-product-demo-group .registry-item .registry-content {
+  min-height: inherit;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.registry-brand-home {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 10px 10px 30px;
+}
+
+

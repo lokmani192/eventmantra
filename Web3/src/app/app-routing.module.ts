@@ -6,6 +6,12 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AuthGuard } from './_guards';
 import { Role } from './_models';
+import { RegistryComponent } from './registry/registry.component';
+import { WebsiteComponent } from './website/website.component';
+import { PlanningToolsComponent } from './planning-tools/planning-tools.component';
+import { VendorsComponent } from './vendors/vendors.component';
+import { VendorSignupComponent } from './vendor-signup/vendor-signup.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -27,7 +33,30 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent
   },
-
+  {
+    path: 'create-wedding-registry',
+    component: RegistryComponent
+  },
+  {
+    path: 'create-wedding-websites',
+    component: WebsiteComponent
+  },
+  {
+    path: 'planning-tools',
+    component: PlanningToolsComponent
+  },
+  {
+    path: 'vendors',
+    component: VendorsComponent
+  },
+  {
+    path: 'vendor-signup',
+    component: VendorSignupComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];

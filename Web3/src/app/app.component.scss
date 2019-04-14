@@ -16,6 +16,9 @@
 @media (min-width: 1200px){
   .event-wrapper { padding-bottom: 364px; }
 }
+@media (max-width: 767px){
+  .event-wrapper {padding-bottom: 964px;}
+}
 
 .container.container-lg{
   width:100%;

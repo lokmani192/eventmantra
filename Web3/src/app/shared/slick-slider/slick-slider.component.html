@@ -1,0 +1,14 @@
+<ngx-slick-carousel class="gallery-main" [ngClass]="{'brand':brand}"
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig">
+  <!--(init)="slickInit($event)"
+  (breakpoint)="breakpoint($event)"
+  (afterChange)="afterChange($event)"
+  (beforeChange)="beforeChange($event)"-->
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <a class="block item-shadow registry-brand-home" *ngIf="brand">
+      <span><img src="{{slide.img}}" alt="" class="img-responsive center-block"></span>
+    </a>
+    <img src="{{slide.img}}" alt="" class="img-responsive center-block" *ngIf="!brand">
+  </div>
+ </ngx-slick-carousel>

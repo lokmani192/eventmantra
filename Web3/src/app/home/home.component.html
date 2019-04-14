@@ -9,77 +9,269 @@
     <div class="text-sm font-20">Everything you need for your event in one place</div>
 
     <div class="m-t-60">
-      <a class="btn btn-lg btn-pink btn-ripple btn-rounded home-signup-btn m-r-20" href="#signupModal" data-toggle="modal" id="initialSignupBtn"><span class="ink ripple-animate"></span>EMAIL SIGNUP</a>
+      <a class="btn btn-lg btn-pink btn-ripple btn-rounded home-signup-btn m-r-20" href="#signupModal" (click)="signInWithGoogle()" data-toggle="modal" id="initialSignupBtn"><span class="ink ripple-animate"></span>EMAIL SIGNUP</a>
       <br class="d-block d-sm-none">
-      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-sm fconnectRemodel3 home-signup-btn" href="https://www.facebook.com/dialog/oauth?client_id=1180781716&amp;redirect_uri=https%3A%2F%2Fwww.letsplanevent.com.com%2F%3Fwed_auth%3Dregister&amp;state=884aef9ba35d2ab753d3add89be83b78&amp;scope=email" data-login="0"><span class="ink ripple-animate"></span>FACEBOOK SIGNUP</a>
+      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-sm fconnectRemodel3 home-signup-btn" (click)="signInWithFB()" href="https://www.facebook.com/dialog/oauth?client_id=1180781716&amp;redirect_uri=https%3A%2F%2Fwww.letsplanevent.com.com%2F%3Fwed_auth%3Dregister&amp;state=884aef9ba35d2ab753d3add89be83b78&amp;scope=email" data-login="0"><span class="ink ripple-animate"></span>FACEBOOK SIGNUP</a>
     </div>
   </div>
 </div>
+<app-category-home></app-category-home>
 
-<section class="home-section home-sec-1 home-sec-p-xs section-column-2 pad-xs p-b-0">
-
-  <div class="container-fluid p-b-50 text-center">
-    <h2 class="home-text-header text-header text-dark font-50 no-m"><strong>Everything You Need to Plan Your Event</strong></h2>
-    <p class="h4 text-normal font-normal font-18 line-30">
-      Your Event Registry, Vendors, Event Website, Checklist, Budget all in one place.
-    </p>
-
+<section class="home-section text-center home-sec-browse pad-xs">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}#guest-list" alt="Guest list" title="Guest list"><img src="{{imageBaseUrl}}assets/Images/home/tool-guest.png" alt="" width="100"></a>
-        <h4 class="m-t-20"><b>Guest list</b></h4>
-        <p class="h5 text-muted line-28">Easily manage your guest lists, track your RSVP's, and thank you cards in one place.</p>
-      </div>
+      <div class="col-md-6">
+        <div class="home-vendors-preview clearfix">
+          <div class="home-feed-item text-left" [ngStyle]="{ 'background-image': 'url(' + imageBaseUrl + 'assets/Images/home/abd-301x352p.jpg)'}">
+            <a href="{{websiteUrl}}pro/photographer/fifth-photography/647510">
+              <div class="home-feed-inner">
+                <div class="home-feed-content">
+                  <h2 class="no-m-t text-white ellipsis">Fifth Photography</h2>
+                  <p class="h5 font-normal text-white m-t-15 ellipsis"></p>
 
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}create-wedding-registry" alt="Registry" title="Registry"><img src="{{imageBaseUrl}}assets/Images/home/tool-registry.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Registry</h4>
-        <p class="h5 text-muted line-28">Thousands of registry items to choose from, cash registries and experiences.</p>
-      </div>
+                  <div class="feed-meta m-t-15 text-white">
+                    <span class="hide"><img src="{{imageBaseUrl}}assets/Images/feed/heart-white.png"> <b>0</b></span>
+                    <span><img src="{{imageBaseUrl}}assets/Images/feed/comment-full-white.png"> <b>13</b></span>
 
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}#vendors" alt="Vendors" title="Vendors"><img src="{{imageBaseUrl}}assets/Images/home/tool-vendors.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Vendors</h4>
-        <p class="h5 text-muted line-28">Get proposals from local vendors based on your budget , location and needs.</p>
-      </div>
+                    <span class="relative m-u-1">
+                      <i class="fa fa-star text-warning"></i>&nbsp;<i class="fa fa-star text-warning"></i>&nbsp;<i class="fa fa-star text-warning"></i>&nbsp;<i class="fa fa-star text-warning"></i>&nbsp;<i class="fa fa-star text-warning"></i>&nbsp;
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div><!-- /.home-vendors-preview -->
+      </div><!-- /.col -->
 
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}create-wedding-websites" alt="Wedding Website" title="Wedding Website"><img src="{{imageBaseUrl}}assets/Images/home/tool-website.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Event Website</h4>
-        <p class="h5 text-muted line-28">Choose from a variety of modern unique website themes.</p>
-      </div>
-    </div>
+      <div class="col-md-6 text-right">
+        <h2 class="home-text-header text-header text-dark text-center-xs no-m"><strong>Wedding Vendors</strong></h2>
+        <p class="h4 text-normal font-normal line-30 text-center-xs">
+          By Category or By Location
+        </p>
 
-    <div class="row text-center">
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}community" alt="Inspiration" title="Inspiration"><img src="{{imageBaseUrl}}assets/Images/home/tool-vision.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Inspiration</h4>
-        <p class="h5 text-muted line-28">Get Inspired from our community of writers and event vendors.</p>
-      </div>
+        <p class="h4 text-normal font-normal line-32 m-t-30 text-center-xs">Get Quotes from local wedding vendors based on your budget, location and wedding needs. You can view their profiles, instant message them and read reviews all in one place.</p>
 
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}planning-tools#checklist" alt="Checklist" title="Checklist"><img src="{{imageBaseUrl}}assets/Images/home/tool-checklist.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Checklist</h4>
-        <p class="h5 text-muted line-28">Our checklist reminds you of everything you need for your big day.</p>
-      </div>
+        <ul class="list-unstyled categories-dropdown static-list selectable clearfix m-t-30">
+          <li>
+            <a class="no-underline" href="{{websiteUrl}}wedding-cakes">
+              <span class="cat-icon block">
+                <img src="{{imageBaseUrl}}assets/Images/category/cake.png" alt="" class="center-block">
+                <img src="{{imageBaseUrl}}assets/Images/category/cake-active.png" alt="" class="center-block icon-active">
+              </span>
+              <span class="m-t-10 text-dark block"><b>Cakes &amp;<br>Deserts</b></span>
+            </a>
 
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}planning-tools#budget" alt="Budget" title="Budget"><img src="{{imageBaseUrl}}assets/Images/home/tool-budget.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Budget</h4>
-        <p class="h5 text-muted line-28">Stay on budget with our budget tracker.</p>
-      </div>
+          </li>
+          <li>
+            <a class="no-underline" href="{{websiteUrl}}wedding-catering-service">
+              <span class="cat-icon block">
+                <img src="{{imageBaseUrl}}assets/Images/category/caterer.png" alt="" class="center-block">
+                <img src="{{imageBaseUrl}}assets/Images/category/caterer-active.png" alt="" class="center-block icon-active">
+              </span>
+              <span class="m-t-10 text-dark block"><b>Food <br>Caterers</b></span>
+            </a>
+          </li>
+          <li>
+            <a class="no-underline" href="{{websiteUrl}}wedding-djs">
+              <span class="cat-icon block">
+                <img src="{{imageBaseUrl}}assets/Images/category/dj.png" alt="" class="center-block">
+                <img src="{{imageBaseUrl}}assets/Images/category/dj-active.png" alt="" class="center-block icon-active">
+              </span>
+              <span class="m-t-10 text-dark block"><b>Dj &amp;<br>Music</b></span>
+            </a>
+          </li>
+          <li>
+            <a class="no-underline" href="{{websiteUrl}}wedding-dresses">
+              <span class="cat-icon block">
+                <img src="{{imageBaseUrl}}assets/Images/category/dress.png" alt="" class="center-block">
+                <img src="{{imageBaseUrl}}assets/Images/category/dress-active.png" alt="" class="center-block icon-active">
+              </span>
+              <span class="m-t-10 text-dark block"><b>Dress &amp;<br>Apparel</b></span>
+            </a>
+          </li>
+        </ul>
 
-      <div class="col-sm-6 col-md-3 m-t-60">
-        <a href="{{websiteUrl}}community" alt="Community" title="Community"><img src="{{imageBaseUrl}}assets/Images/home/tool-community.png" alt="" width="100"></a>
-        <h4 class="m-t-20">Community</h4>
-        <p class="h5 text-muted line-28">Ask questions of our community and get inspired by other couples.</p>
+        <div class="text-right">
+          <a href="{{websiteUrl}}vendors" class="btn btn-lg btn-pink btn-rounded btn-ripple m-t-30 btn-size-responsive"><span class="">BROWSE PROFESSIONALS</span></a>
+        </div>
       </div>
-    </div>
+    </div><!-- /.row -->
 
+    <div class="text-bg light">Professionals</div>
   </div>
-  <div class="bottom-line float-right line-inside" style="width: 184.5px;"></div>
+
+  <div class="bottom-line line-inside" style="width: 184.5px;"></div>
 </section>
 
+<section class="home-section home-sec-1 home-sec-p-xs pad-xs">
+  <div class="container-fluid text-center pad-btm">
+    <h2 class="home-text-header text-header text-dark no-m"><strong>Create a Beautiful Wedding Website For Free</strong></h2>
+    <p class="h4 text-normal font-normal line-30">
+      Choose from our variety of modern designs
+    </p>
+
+    <div class="row h5 font-normal text-muted line-28 m-t-40">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="row text-left">
+          <div class="col-sm-6">
+            <ul class="list-unstyled list-icon-group h5 font-normal text-muted line-32">
+              <li class="m-b-20">
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Choose Your Templates</div>
+              </li>
+              <li class="m-b-20">
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Get Your Own Domain</div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="list-unstyled list-icon-group h5 font-normal text-muted line-32">
+              <li class="m-b-20">
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Collect RSVP's and Password Protect Your Site</div>
+              </li>
+              <li class="m-b-20">
+                <div class="list-icon"><img src="{{imageBaseUrl}}assets/Images/home/check-pink.svg" width="30"></div>
+                <div class="m-l-10">Completely Customizable</div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- /.row -->
+      </div>
+    </div><!-- /.row -->
+
+    <a href="#signupModal" data-toggle="modal" class="btn btn-lg btn-pink btn-rounded btn-ripple m-t-30 btn-size-responsive"><span class="">CHECKOUT OUR DESIGNS</span></a>
+  </div><!-- /.container -->
+  <app-slick-slider></app-slick-slider>
+  <hr class="border-dark d-none d-sm-block d-md-none">
+  <div class="text-bg light">Letsplanevent</div>
+  <div class="bottom-line" style="width: 184.5px;"></div>
+</section>
+
+<section class="home-section home-sec-1 pad-xs relative">
+  <div class="container-fluid text-center pad-btm relative">
+    <h2 class="home-text-header text-header text-dark no-m"><strong>A Detailed Checklist of Everything<br class="hidden-xs"> For Your Wedding</strong></h2>
+
+    <div class="panel b-gradient b-t text-left m-t-60 panel-demo relative" style="z-index:2;">
+      <div class="panel-body">
+        <h3 class="container-fluid p-t-20">February</h3>
+        <div class="list-group check-list m-t-20 text-muted">
+          <div class="list-group-item editable">
+            <div class="checkbox no-m">
+              <label>
+                <input type="checkbox" checked="true">
+                <div class="animated-checkbox"><div><span></span></div></div>
+              </label>
+            </div>
+
+            <div class="text-dark">Meet and book musicians for your ceremony</div>
+            <div class="checklist-date font-12-xs m-t-5-xs">
+              Feb 13, 2018
+              <a class="m-r-10 m-l-15"><img src="{{imageBaseUrl}}assets/Images/home/edit.svg" width="20"></a>
+              <a><img src="{{imageBaseUrl}}assets/Images/home/garbage.svg" width="20"></a>
+            </div>
+          </div><!-- /.list-group-item -->
+
+          <div class="list-group-item editable">
+            <div class="checkbox no-m">
+              <label>
+                <input type="checkbox" checked="false">
+                <div class="animated-checkbox"><div><span></span></div></div>
+              </label>
+            </div>
+
+            <div class="text-dark">Book your rehearsal dinner venue</div>
+            <div class="checklist-date font-12-xs m-t-5-xs">
+              Feb 20, 2018
+              <a class="m-r-10 m-l-15"><img src="{{imageBaseUrl}}assets/Images/home/edit.svg" width="20"></a>
+              <a><img src="{{imageBaseUrl}}assets/Images/home/garbage.svg" width="20"></a>
+            </div>
+          </div><!-- /.list-group-item -->
+
+          <div class="list-group-item editable">
+            <div class="checkbox no-m">
+              <label>
+                <input type="checkbox">
+                <div class="animated-checkbox"><div><span></span></div></div>
+              </label>
+            </div>
+
+            <div class="text-dark">Research and book hair stylists and makeup artists, you will start to do a test run</div>
+            <div class="checklist-date font-12-xs m-t-5-xs">
+              Feb 27, 2018
+              <a class="m-r-10 m-l-15"><img src="{{imageBaseUrl}}assets/Images/home/edit.svg" width="20"></a>
+              <a><img src="{{imageBaseUrl}}assets/Images/home/garbage.svg" width="20"></a>
+            </div>
+          </div><!-- /.list-group-item -->
+        </div><!-- /.list-group -->
+
+        <h3 class="container-fluid m-t-60">March</h3>
+        <div class="list-group check-list m-t-20 text-muted">
+          <div class="list-group-item editable">
+            <div class="checkbox no-m">
+              <label>
+                <input type="checkbox">
+                <div class="animated-checkbox"><div><span></span></div></div>
+              </label>
+            </div>
+
+            <div class="text-dark">Announce the engagement to family &amp; friends</div>
+            <div class="checklist-date font-12-xs m-t-5-xs">
+              Feb 13, 2018
+              <a class="m-r-10 m-l-15"><img src="{{imageBaseUrl}}assets/Images/home/edit.svg" width="20"></a>
+              <a><img src="{{imageBaseUrl}}assets/Images/home/garbage.svg" width="20"></a>
+            </div>
+          </div><!-- /.list-group-item -->
+
+          <div class="list-group-item editable">
+            <div class="checkbox no-m">
+              <label>
+                <input type="checkbox">
+                <div class="animated-checkbox"><div><span></span></div></div>
+              </label>
+            </div>
+
+            <div class="text-dark">Plan an engagement party</div>
+            <div class="checklist-date font-12-xs m-t-5-xs">
+              Feb 20, 2018
+              <a class="m-r-10 m-l-15"><img src="{{imageBaseUrl}}assets/Images/home/edit.svg" width="20"></a>
+              <a><img src="{{imageBaseUrl}}assets/Images/home/garbage.svg" width="20"></a>
+            </div>
+          </div><!-- /.list-group-item -->
+
+          <div class="list-group-item editable">
+            <div class="checkbox no-m">
+              <label>
+                <input type="checkbox">
+                <div class="animated-checkbox"><div><span></span></div></div>
+              </label>
+            </div>
+
+            <div class="text-dark">Book ceremony and reception venue</div>
+            <div class="checklist-date font-12-xs m-t-5-xs">
+              Feb 27, 2018
+              <a class="m-r-10 m-l-15"><img src="{{imageBaseUrl}}assets/Images/home/edit.svg" width="20"></a>
+              <a><img src="{{imageBaseUrl}}assets/Images/home/garbage.svg" width="20"></a>
+            </div>
+          </div><!-- /.list-group-item -->
+        </div><!-- /.list-group -->
+
+      </div>
+    </div>
+
+    <div class="home-bg-float home-bg-pink">
+      <img src="{{imageBaseUrl}}assets/Images/home/bg-image3.jpg" alt="">
+    </div>
+    <div class="home-bg-float home-bg-blue">
+      <img src="{{imageBaseUrl}}assets/Images/home/bg-image2.jpg" alt="">
+    </div>
+  </div><!-- /.container -->
+
+  <div class="text-bg light">Checklist</div>
+  <div class="bottom-line" style="width: 184.5px;"></div>
+</section>
 
 <section class="home-section pad-sm section-column-2 bg-grey-light">
   <div class="container-fluid">
@@ -125,14 +317,21 @@
     <h2 class="text-lg text-header text-white">Your Event, Your Choice!</h2>
 
     <div class="m-t-40">
-      <a href="#signupModal" data-toggle="modal" class="btn btn-lg btn-pink btn-ripple btn-rounded m-r-20 no-m-xs">EMAIL SIGNUP</a>
+      <a href="#signupModal" data-toggle="modal" class="btn btn-lg btn-pink btn-ripple btn-rounded m-r-20 no-m-xs home-signup-btn">EMAIL SIGNUP</a>
       <br class="d-block d-sm-none">
-      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-xs fconnectRemodel3" href="https://www.facebook.com/dialog/oauth?client_id=118078178&amp;redirect_uri=https%3A%2F%2Fwww.letsplanevent.com%2F%3Fwed_auth%3Dregister&amp;state=707785d861839834098b95dcdf21f161&amp;scope=email" data-login="0">FACEBOOK SIGNUP</a>
+      <a class="btn btn-lg btn-blue btn-ripple btn-transparent btn-rounded m-t-20-sm fconnectRemodel3 home-signup-btn" href="https://www.facebook.com/dialog/oauth?client_id=118078178&amp;redirect_uri=https%3A%2F%2Fwww.letsplanevent.com%2F%3Fwed_auth%3Dregister&amp;state=707785d861839834098b95dcdf21f161&amp;scope=email" data-login="0">FACEBOOK SIGNUP</a>
     </div>
   </div>
 
   <div class="bottom-line float-right" style="width: 184.5px;"></div>
 </section>
+
+<div>{{loggedIn}}</div>
+<ul *ngIf="user">
+  <li *ngFor="let item of user | keyvaluepa">
+    <b>{{item.key}}:{{item.value}}</b>
+  </li>
+</ul>
 <!--<h2 *ngIf="userFromApi">Hello <span style="color:#ff0000">{{userFromApi.firstName|titlecase}} {{userFromApi.lastName|titlecase}}</span> !</h2>
 <p>Your role is: <strong>{{currentUser.role}}</strong>.</p>
 <div>
